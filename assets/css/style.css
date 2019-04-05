@@ -114,17 +114,16 @@ body{
     flex-wrap: wrap;
 }
 
-.linkedin {
+.linkedin, .github {
     border: 2px solid white;
     padding: 10px 5px;
     flex-basis: 45%;
 }
 
-.github {
-    border: 2px solid white;
-    padding: 10px 5px;
-    flex-basis: 45%;
+.linkedin:hover, .github:hover{
+    background-color: rgba(255, 255, 255, .2)
 }
+
 
 .skill-chart {
     flex: 1 1 300px;
@@ -133,17 +132,37 @@ body{
     padding: 15px;
 }
 
-#myChart {
-    margin: auto;
-    margin-top: 70px;
-}
-
-.currently-exploring > h3 {
+.skill-chart-header {
     text-align: center;
 }
+
+#myChart {
+    margin: auto;
+    /* margin-top: 70px; */
+    min-width: 300px;
+    max-width: 450px;
+}
+
 
 .currently-exploring {
     flex: 1 1 45%;
     margin: 10px;
     padding: 15px;
+}
+                    
+.currently-exploring > h3 {
+    text-align: center;
+}
+
+.currently-exploring-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.currently-exploring-list > div {
+    padding: 10px;
+    /* margin: 10px; */
+    /* border: 1px solid white; */
+    font-size: 1.2em;
 }
