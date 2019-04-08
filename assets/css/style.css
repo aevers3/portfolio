@@ -7,7 +7,16 @@ html {
 
 body{
     color: #eee;
+    line-height: 1.3;
 }
+
+p {
+    margin: 10px 0;
+}
+
+/* ol, ul {
+    list-style: circle;
+} */
 
 .scroll-snap {
     scroll-snap-type: y proximity; 
@@ -419,7 +428,7 @@ button, .portfolio-screenshot {
 
 /* Cut out excess horizontal spacing */
 @media only screen and (max-width: 600px) {
-    body, .container, #container-1 {
+    body, .container, #container-1, .about-me, .skill-chart {
         margin-left: 0;
         margin-right: 0;
     }
