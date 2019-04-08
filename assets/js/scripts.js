@@ -10,7 +10,7 @@ var myChart = new Chart(ctx, {
                 'rgba(226, 76, 38, 0.2)',
                 'rgba(86, 60, 190, 0.3)',
                 'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
+                'rgba(255, 156, 86, 0.2)',
                 'rgba(241, 224, 90, 0.2)',
                 'rgba(31, 255, 93, 0.2)'
             ],
@@ -18,7 +18,7 @@ var myChart = new Chart(ctx, {
                 'rgba(226, 76, 38, 1)',
                 'rgba(86, 60, 190, 1)',
                 'rgba(153, 102, 255, 1)',
-                'rgba(255, 206, 86, 1)',
+                'rgba(255, 156, 86, 1)',
                 'rgba(241, 224, 90, 1)',
                 'rgba(31, 255, 93, 1)'
             ],
@@ -36,6 +36,25 @@ var myChart = new Chart(ctx, {
 
                 },
             }
+        },
+        legend: {
+            labels: {
+                fontColor: 'white',
+            }
         }
     }
 });
+
+function toggleScrollSnap() {
+    if (window.innerWidth > 980) {
+        console.log(window.innerWidth)
+        $('body').addClass('scroll-snap');
+    } else {
+        $('body').removeClass('scroll-snap');
+    }
+}
+toggleScrollSnap();
+
+$(window).resize(function(){
+    toggleScrollSnap();
+  });

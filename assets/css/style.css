@@ -1,12 +1,137 @@
+/* -------------------------------- */
+    /* GENERAL STYLES */
+/* -------------------------------- */
 html {
     scroll-behavior: smooth;
 }
 
 body{
-    /* scroll-snap-type: y mandatory; */
-    color: #222;
+    color: #eee;
 }
 
+.scroll-snap {
+    scroll-snap-type: y mandatory; 
+}
+
+/* Type Scale implementation (and some general header rules)... */
+h1, h2, h3, .project-link-button, .currently-exploring-list {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+h1 {
+    font-size: 4.209em;
+    margin-top: 0px;
+    padding-top: 30px;
+    padding-left: 20px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: 'IBM Plex Serif', serif;
+    text-shadow: 2px 2px 2px #000;
+}
+
+h2 {
+    font-size: 2.369em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.777em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p, ul, li, .tech-list-item {
+    font-family: 'IBM Plex Serif', serif;
+}
+
+button, .screenshot-container {
+    cursor: pointer;
+}
+
+.portfolio-screenshot {
+    width: 90%;
+    height: auto;
+    border: 2px solid rgba(0, 0, 0, .6);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .6);
+}
+
+.portfolio-screenshot:hover {
+    transform: scale(1.02)
+}
+
+/* The actual container for each slide */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 15px 10px 0px;
+}
+
+/* The items in the container */
+.container-item {
+    flex: 0 1 45%;
+    padding: 20px;
+}
+
+/* The container item that holds the description and tech list */
+.container-text-item {
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 10%;
+}
+
+.screenshot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.project-link-button {
+    flex: 0 1 45%;
+    font-size: 1.333em;
+    border: 1px solid rgba(255, 156, 86, 1);
+    padding: 5px;
+    color: rgba(255, 156, 86, 1);
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.project-link-button:hover {
+    background-color: rgba(255, 156, 86, .5);
+    transform: scale(1.05, 1.05);
+    color: #fff;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+}
+
+.project-link-button:active {
+    box-shadow: 0;
+    transform: scale(1, 1);
+}
+
+.tech-info-header {
+    font-size: 1.333em;
+    color: rgba(255, 156, 86, 1);
+    font-family: "IBM Plex Sans", sans-serif;
+    text-align: center;
+}
+
+.tech-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 15px 10px;
+}
+
+.tech-list-item {
+    flex: 1 1 45%;
+    text-align: center;
+    /* font-size: 1.333em; */
+}
 
 /* ------------------------------------------------------------------------------- */
 /* Parallax */
@@ -19,53 +144,79 @@ body{
     background-size: cover;
     margin: 0px -10px;
     position: relative;
+    min-height: 90vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
 }
 
 #bgimg-1 {
-    background-image: url("../images/img5.png");
-    /* background-image: linear-gradient(to bottom, rgba(255, 192, 203, 1), blue); */
-    /* background-color: rgb(255, 192, 203); */
-    min-height: 100vh;
-    scroll-snap-align: start;
+    background-image: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(255, 0, 0, 0)
+    ),
+    /* bottom, image */
+    url("../images/15096258345_f0737cdc15_k.jpg");
 }
 
 #container-1 {
     display: flex;
     flex-flow: row wrap;
-    background-color: #333;
-    margin: 15px;
+    /* background-color: rgba(51, 51, 51, .9); */
+    margin: 15px 15px 0px;
 }
 
 #bgimg-2 {
-    background-image: url("../images/img4.png");
-    /* background-color: teal; */
-    min-height: 100vh;
-    scroll-snap-align: start;
+    /* background-image: url("../images/15093219311_8abc1dce0c_k.jpg"); */
+    background-image: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(255, 0, 0, 0)
+    ),
+    /* bottom, image */
+    url("../images/15093219311_8abc1dce0c_k.jpg");
 }
 
 #bgimg-3 {
-    background-image: url("../images/img3.png");
-    /* background-color: yellow; */
-    min-height: 100vh;
-    scroll-snap-align: start;
+    /* background-image: url("../images/15096256095_501a857712_k.jpg"); */
+    background-image: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(255, 0, 0, 0)
+    ),
+    /* bottom, image */
+    url("../images/15096256095_501a857712_k.jpg");
 }
 
 #bgimg-4 {
-    background-image: url("../images/img4.png");
-    /* background-color: purple; */
-    min-height: 100vh;
-    scroll-snap-align: start;
+    /* background-image: url("../images/14623616027_8695d80ce0_k.jpg"); */
+    background-image: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(255, 0, 0, 0)
+    ),
+    /* bottom, image */
+    url("../images/14623616027_8695d80ce0_k.jpg");
 }
 
 #bgimg-5 {
     background-image: url("../images/img5.png");
-    /* background-color: orange; */
-    min-height: 100vh;
-    scroll-snap-align: start;
+    background-image: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(255, 0, 0, 0)
+    ),
+    /* bottom, image */
+    url("../images/img5.png");
 }
 
 .parallax-divider {
-    height:60px;
+    height: 10px;
     background-color:rgba(0, 0, 0, .2); 
     margin: 0 -10px;
 }
@@ -80,9 +231,29 @@ body{
     bottom: 30px;
 }
 
+@media only screen and (max-width: 980px) {
+    body {
+        scroll-snap-type: none;
+    }
+}
+
 /* ---------------------- */
 /* Section 1 styling... */
 /* ---------------------- */
+
+#section-one-header {
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    /* color: hsl(30, 100%, 50%); */
+    color: yellow;
+}
+
+#container-1 .about-me, .skill-chart {
+    background-color: rgba(0, 0, 0, .6)
+}
+
 .about-me, .skill-chart {
     margin: 10px;
 }
@@ -94,7 +265,7 @@ body{
 .about-me {
     flex: 1 1 45%;
     position: relative;
-    padding: 20px;
+    padding: 5px 20px;
     color: white;
 }
 
@@ -103,25 +274,38 @@ body{
     width: 150px;
     object-fit: contain;
     float: left;
+    border: 1px solid #222;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .6)
 }
 
-.social-links {
-    flex: 1 1 45%;
-    margin: 10px;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.contact-link {
+    flex: 0 1 30%;
 }
 
 .linkedin, .github {
+    margin-top: 20px;
     border: 2px solid white;
     padding: 10px 5px;
     flex-basis: 45%;
 }
 
 .linkedin:hover, .github:hover{
-    background-color: rgba(255, 255, 255, .2)
+    background-color: rgba(255, 255, 255, .2);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
+}
+
+.scroll-message-container {
+    margin: 15px 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-message {
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-size: 1.333em;
+    
 }
 
 
@@ -129,7 +313,7 @@ body{
     flex: 1 1 300px;
     color: white;
     /* min-width: 400px; */
-    padding: 15px;
+    padding: 5px 15px;
 }
 
 .skill-chart-header {
@@ -161,8 +345,32 @@ body{
 }
 
 .currently-exploring-list > div {
-    padding: 10px;
+    padding: 15px 10px;
     /* margin: 10px; */
     /* border: 1px solid white; */
     font-size: 1.2em;
+}
+
+/* --------------------------------------------------- */
+/* -------------- Section 2 Styling -------------- */
+/* --------------------------------------------------- */
+
+
+
+
+
+/* --------------------------------------------------- */
+/* -------------- Section 3 Styling -------------- */
+/* --------------------------------------------------- */
+
+#section-three-header, .section-three-body, .section-three-body .tech-list-item {
+    /* color: #222; */
+}
+
+.section-three-container {
+    flex-wrap: wrap-reverse;
+}
+
+.section-three-container .section-three-body {
+    order: 2;
 }

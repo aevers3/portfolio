@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:400i|IBM+Plex+Sans:200|IBM+Plex+Serif"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
 </head>
 
 <body>
     <!-- Section 1 starts here -->
     <section id="bgimg-1">
-        <h1>Section 1 content</h1>
+        <h1 id="section-one-header">Alex Evers</h1>
         <!-- About me starts here -->
         <div id="container-1">
             <div class="about-me">
@@ -33,20 +35,19 @@
                         Coding
                         Boot Camp to build onto my limited coding skill set. Upon completion of the program, I'll be
                         seeking
-                        a job that will allow me to further develop my skills and knowledge.</p>
-                    <p>In my free time, I like to play music and have been a guitarist and bassist for most of my life.
-                        Other hobbies of mine include cooking, watching movies, and training in Brazilian Jiu Jitsu.
-                        Regardless of the activity, I really enjoy learning about the things that interest me. I
+                        a job that will allow me to further develop my skills and knowledge. I
                         consider myself a lifelong learner in both my professional and personal lives.</p>
                 </div>
-                <div class="social-links">
-                    <div style="cursor: pointer;"
-                        onclick="window.open('https://www.linkedin.com/in/alex-evers-3143054a/')" class="linkedin">
-                        Linkedin
-                    </div>
-                    <div style="cursor: pointer;" onclick="window.open('https://github.com/aevers3')" class="github">
-                        Github
-                    </div>
+                <div class="button-container">
+                    <button type="button" class="project-link-button contact-link"
+                        onclick="window.open('https://www.linkedin.com/in/alex-evers-3143054a/')">Linkedin</button>
+                    <button type="button" class="project-link-button contact-link"
+                        onclick="window.open('https://github.com/aevers3')">Github</button>
+                    <button type="button" class="project-link-button contact-link"
+                        onclick="window.open('assets/files/Alex_Evers_Resume_2018.pdf')">Resume</button>
+                </div>
+                <div class="scroll-message-container">
+                    <span class="scroll-message">Scroll down to check out some of my recent projects!</span>
                 </div>
             </div>
 
@@ -57,19 +58,10 @@
                 <div class="currently-exploring">
                     <h3>Currently Exploring:</h3>
                     <div class="currently-exploring-list">
-                        <div>&bull; Node.js</div>
-                        <div>&bull; Data visualization via Chart.js</div>
-                        <div>&bull; CSS Animations and Transitions</div>
-                        <div>&bull; And more...</div>
-
-                        
-                        
-                        <!-- <ul>
-                            <li>Node.js</li>
-                            <li>Data visualization via Chart.js</li>
-                            <li>CSS Animations and Transitions</li>
-                            <li>And more...</li>
-                        </ul> -->
+                        <div> Node.js</div>
+                        <div> Data Visualization via Chart.js</div>
+                        <div> CSS Animations and Transitions</div>
+                        <div> And more...</div>
                     </div>
                 </div>
             </div>
@@ -81,34 +73,148 @@
 
         </div>
 
-        <h3 class="scroll-text"><a href="#bgimg-2">Scroll Down...</a></h3>
     </section>
 
     <div class="parallax-divider"></div>
 
     <!-- Section 2 starts here -->
     <section id="bgimg-2">
-        <p>Section 2 content</p>
+        <h1 id="section-two-header">Stock and Financial News App</h1>
+        <div class="container">
+            <!-- Left column... -->
+            <div class="container-item container-text-item">
+                <p class="tech-info-header">About</p>
+                <p>I worked on this project with 3 other developers. The main components I contributed to include:</p>
+                <ul>
+                    <li>A user search</li>
+                    <li>A few API calls to retrieve current stock data and related news articles</li>
+                    <li>Data visualization to meaningfully display the stock data</li>
+                </ul>
 
-        <h3 class="scroll-text"><a href="#bgimg-3">Scroll Down...</a></h3>
+                <p class="tech-info-header">Technologies used in this project:</p>
+
+                <div class="tech-list-container">
+                    <span class="tech-list-item">HTML/CSS</span>
+                    <span class="tech-list-item">Bootstrap</span>
+                    <span class="tech-list-item">Javascript</span>
+                    <span class="tech-list-item">jQuery</span>
+                    <span class="tech-list-item">Chart.js</span>
+                    <span class="tech-list-item">Google Firebase</span>
+                </div>
+
+                <div class="button-container">
+                    <button type="button" class="project-link-button"
+                        onclick="window.open('https://github.com/jrbricafort/Project-One')">Github Repository</button>
+                    <button type="button" class="project-link-button"
+                        onclick="window.open('https://jrbricafort.github.io/Project-One/')">Deployed App</button>
+                </div>
+            </div>
+
+            <!-- Right column... -->
+            <div class="container-item screenshot-container">
+                <img src="assets/images/financial-app-screenshot.png" alt="Screenshot of Stock and Data App"
+                    class="portfolio-screenshot" onclick="window.open('https://jrbricafort.github.io/Project-One/')">
+            </div>
+        </div>
+        </div>
+
+
     </section>
 
     <div class="parallax-divider"></div>
 
     <!-- Section 3 starts here -->
     <section id="bgimg-3">
-        <p>Section 3 content</p>
+        <h1 id="section-three-header">Train Scheduling App</h1>
+        <div class="container section-three-container">
+            <!-- Right column... -->
+            <div class="container-item section-three-body container-text-item">
+                <p class="tech-info-header">About</p>
 
-        <h3 class="scroll-text"><a href="#bgimg-4">Scroll Down...</h3></a>
+                <p>This application is primarily an exploration into persisting server data, making use of Google
+                    Firebase.
+                    It allows users (probably some train administrator), to add trains to the onscreen schedule.
+                </p>
+                <p>
+                    The train arrivals are also tracked over time using the given arrival intervals and first train
+                    arrival
+                    time.
+                    All time calculations are performed using Moment.js.
+                </p>
+
+                <p class="tech-info-header">Technologies used in this project:</p>
+                <div class="tech-list-container">
+                    <span class="tech-list-item">HTML/CSS</span>
+                    <span class="tech-list-item">Bootstrap</span>
+                    <span class="tech-list-item">Javascript</span>
+                    <span class="tech-list-item">jQuery</span>
+                    <span class="tech-list-item">Firebase</span>
+                    <span class="tech-list-item">Moment.js</span>
+                </div>
+
+                <div class="button-container">
+                    <button type="button" class="project-link-button"
+                        onclick="window.open('https://github.com/aevers3/train-schedule')">Github Repository</button>
+                    <button type="button" class="project-link-button"
+                        onclick="window.open('https://aevers3.github.io/train-schedule/')">Deployed App</button>
+                </div>
+            </div>
+
+            <!-- Left column... -->
+            <div class="container-item screenshot-container">
+                <img src="assets/images/train-schedule-screenshot.png" alt="Screenshot of Train Scheduling"
+                    class="portfolio-screenshot" onclick="window.open('https://aevers3.github.io/train-schedule/')">
+            </div>
+        </div>
+
+
     </section>
 
     <div class="parallax-divider"></div>
 
     <!-- Section 4 starts here -->
     <section id="bgimg-4">
-        <p>Section 4 content</p>
+        <h1>Planet Trivia</h1>
+        <div class="container">
+            <!-- Left column -->
+            <div class="container-item container-text-item">
+                <p class="tech-info-header">About</p>
 
-        <h3 class="scroll-text"><a href="#bgimg-5">Scroll Down...</h3></a>
+                <p>
+                    This is a multiple choice quiz with a 15-second time limit on each question. There are 10 questions,
+                    and
+                    the
+                    user is presented with his or her score upon completion of the quiz.
+                </p>
+
+                <p>The questions and answers are
+                    stored in
+                    a JS object, so swapping in new questions or quizzes can be done simply.
+                </p>
+
+                <p class="tech-info-header">Technologies used:</p>
+                <ul class="tech-list">
+                    <li>HTML/CSS</li>
+                    <li>Bootstrap</li>
+                    <li>Javascript</li>
+                    <li>jQuery</li>
+                </ul>
+
+                <div class="button-container">
+                    <button type="button" class="project-link-button"
+                        onclick="window.open('https://github.com/aevers3/TriviaGame')">Github Repository</button>
+                    <button type="button" class="project-link-button"
+                        onclick="window.open('https://aevers3.github.io/TriviaGame/index.html')">Deployed App</button>
+                </div>
+
+            </div>
+            <!-- Right column -->
+            <div class="container-item screenshot-container">
+                <img src="assets/images/planet-trivia-screenshot.png" alt="Screenshot of Planet Trivia"
+                    class="portfolio-screenshot" onclick="window.open('https://aevers3.github.io/TriviaGame/index.html')">
+            </div>
+        </div>
+
     </section>
 
     <div class="parallax-divider"></div>
