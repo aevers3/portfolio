@@ -7,20 +7,20 @@ html {
 
 body{
     color: #eee;
+    scroll-snap-type: y mandatory;
 }
 
 .scroll-snap {
-    scroll-snap-type: y proximity; 
+}
+
+.container-custom{
+    background-color: rgba(0, 0, 0, .6);
 }
 
 /* Type Scale implementation (and some general header rules)... */
-h1, h2, h3, .project-link-button, .currently-exploring-list, .contact-item-header, .tech-info-header {
+h1, h2, h3, .project-link-button, .currently-exploring-list, .contact-item-header {
     font-family: 'IBM Plex Sans', sans-serif;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
-}
-
-h1, p, ul, li, .tech-list-item, span {
-    font-family: 'IBM Plex Serif', serif;
 }
 
 h1 {
@@ -30,7 +30,8 @@ h1 {
     padding-left: 20px;
     margin-bottom: 0px;
     text-align: center;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+    font-family: 'IBM Plex Serif', serif;
+    text-shadow: 2px 2px 2px #000;
 }
 
 h2 {
@@ -45,7 +46,11 @@ h3 {
     margin-bottom: 10px;
 }
 
-button, .portfolio-screenshot {
+p, ul, li, .tech-list-item, span {
+    font-family: 'IBM Plex Serif', serif;
+}
+
+button, .screenshot-container {
     cursor: pointer;
 }
 
@@ -60,24 +65,13 @@ button, .portfolio-screenshot {
     transform: scale(1.02)
 }
 
-/* The actual container for each slide */
-.container {
-    display: flex;
-    flex-wrap: wrap-reverse;
-    justify-content: space-around;
-    margin: 15px 10px 0px;
-}
-
 /* The items in the container */
 .container-item {
-    flex: 1 1 45%;
+    flex: 0 1 45%;
     padding: 20px;
 }
 
 /* The container item that holds the description and tech list */
-.container-text-item {
-    background-color: rgba(0, 0, 0, .7);
-}
 
 .screenshot-container {
     display: flex;
@@ -146,7 +140,6 @@ button, .portfolio-screenshot {
     min-height: 90vh;
     scroll-snap-align: start;
     scroll-snap-stop: normal;
-    box-shadow: 0px 10px 8px rgba(0, 0, 0, .6);
 }
 
 #bgimg-1 {
@@ -216,7 +209,7 @@ button, .portfolio-screenshot {
 }
 
 .parallax-divider {
-    height: 15px;
+    height: 10px;
     background-color:rgba(0, 0, 0, .2); 
     margin: 0 -10px;
 }
@@ -231,7 +224,11 @@ button, .portfolio-screenshot {
     bottom: 30px;
 }
 
-
+@media only screen and (max-width: 980px) {
+    body {
+        scroll-snap-type: none;
+    }
+}
 
 /* ---------------------- */
 /* Section 1 styling... */
@@ -246,12 +243,8 @@ button, .portfolio-screenshot {
     color: yellow;
 }
 
-#container-1 .about-me, .skill-chart {
-    background-color: rgba(0, 0, 0, .6);
-}
-
 .about-me, .skill-chart {
-    margin: 10px;
+    /* margin: 0 10px; */
 }
 
 .about-me-header {
@@ -331,11 +324,8 @@ button, .portfolio-screenshot {
     
 }
 
-/* Right column */
 
 .skill-chart {
-    flex: 1 1 300px;
-    align-self: flex-start;
     color: white;
     /* min-width: 400px; */
     padding: 5px 15px;
@@ -393,49 +383,9 @@ button, .portfolio-screenshot {
 }
 
 .section-three-container {
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
 }
 
-.section-three-container .flipped-body {
+.section-three-container .section-three-body {
     order: 2;
 }
-
-
-
-
-
-
-
-
-/* ---------------------------------------------*/
-/* MEDIA QUERIES */
-/* ---------------------------------------------*/
-/* Turn off snap scroll on smaller screens */
-@media only screen and (max-width: 980px) {
-    body {
-        scroll-snap-type: none;
-    }
-}
-
-/* Cut out excess horizontal spacing */
-@media only screen and (max-width: 600px) {
-    body, .container, #container-1 {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    h1 {
-        font-size: 3.157em;
-    }
-
-    h2 {
-        font-size: 1.777em;
-    }
-
-    h3 {
-        font-size: 1.333em;
-    }
-
-}
-
-  

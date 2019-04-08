@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Alex Evers | Web Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:400i|IBM+Plex+Sans:200|IBM+Plex+Serif"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
@@ -43,6 +43,8 @@
                             Fact:</em> I
                         took all of the photos on this site!).</p>
                 </div>
+
+                <!-- Github, Linkedin, Resume Buttons... -->
                 <div class="button-container">
                     <button type="button" class="project-link-button contact-link"
                         onclick="window.open('https://www.linkedin.com/in/alex-evers-3143054a/')">Linkedin</button>
@@ -51,6 +53,8 @@
                     <button type="button" class="project-link-button contact-link"
                         onclick="window.open('assets/files/Alex_Evers_Resume_2018.pdf')">Resume</button>
                 </div>
+
+                <!-- Contact info starts here... -->
                 <h3 class="contact-header">Get in Touch!</h3>
                 <div class="contact-container">
                     <div class="contact-item">
@@ -82,13 +86,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- This section will hold links to Linkedin and Github on the left, and a list of currently exploring topics on the right-->
-        <div class="bottom-container">
-
-
-        </div>
-
     </section>
 
     <div class="parallax-divider"></div>
@@ -97,6 +94,7 @@
     <section id="bgimg-2">
         <h1 id="section-two-header">Stock and Financial News App</h1>
         <div class="container">
+
             <!-- Left column... -->
             <div class="container-item container-text-item">
                 <p class="tech-info-header">About</p>
@@ -132,9 +130,6 @@
                     class="portfolio-screenshot" onclick="window.open('https://jrbricafort.github.io/Project-One/')">
             </div>
         </div>
-        </div>
-
-
     </section>
 
     <div class="parallax-divider"></div>
@@ -144,7 +139,7 @@
         <h1 id="section-three-header">Train Scheduling App</h1>
         <div class="container section-three-container">
             <!-- Right column... -->
-            <div class="container-item section-three-body container-text-item">
+            <div class="container-item flipped-body container-text-item">
                 <p class="tech-info-header">About</p>
 
                 <p>This application is primarily an exploration into persisting server data, making use of Google
@@ -182,8 +177,6 @@
                     class="portfolio-screenshot" onclick="window.open('https://aevers3.github.io/train-schedule/')">
             </div>
         </div>
-
-
     </section>
 
     <div class="parallax-divider"></div>
@@ -192,6 +185,7 @@
     <section id="bgimg-4">
         <h1>Planet Trivia</h1>
         <div class="container">
+
             <!-- Left column -->
             <div class="container-item container-text-item">
                 <p class="tech-info-header">About</p>
@@ -209,12 +203,12 @@
                 </p>
 
                 <p class="tech-info-header">Technologies used:</p>
-                <ul class="tech-list">
-                    <li>HTML/CSS</li>
-                    <li>Bootstrap</li>
-                    <li>Javascript</li>
-                    <li>jQuery</li>
-                </ul>
+                <div class="tech-list-container">
+                        <span class="tech-list-item">HTML/CSS</span>
+                        <span class="tech-list-item">Bootstrap</span>
+                        <span class="tech-list-item">Javascript</span>
+                        <span class="tech-list-item">jQuery</span>
+                    </div>
 
                 <div class="button-container">
                     <button type="button" class="project-link-button"
@@ -224,6 +218,7 @@
                 </div>
 
             </div>
+
             <!-- Right column -->
             <div class="container-item screenshot-container">
                 <img src="assets/images/planet-trivia-screenshot.png" alt="Screenshot of Planet Trivia"
@@ -237,11 +232,11 @@
     <div class="parallax-divider"></div>
 
     <!-- Section 5  starts here -->
-    <section id="bgimg-5">
+    <!-- <section id="bgimg-5">
         <p>Section 5 content</p>
 
         <h3 class="scroll-text"><a href="#bgimg-1">To Top...</a></h3>
-    </section>
+    </section> -->
 
 
     <script src="assets/js/Chart.js"></script>

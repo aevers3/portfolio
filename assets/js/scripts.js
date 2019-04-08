@@ -46,15 +46,11 @@ var myChart = new Chart(ctx, {
 });
 
 function toggleScrollSnap() {
-    if (window.innerWidth > 980) {
-        console.log(window.innerWidth)
+    // if (window.innerWidth > 980) {
+    //     console.log(window.innerWidth)
         $('body').addClass('scroll-snap');
-    } else {
-        $('body').removeClass('scroll-snap');
-    }
+    // } else {
+    //     $('body').removeClass('scroll-snap');
+    // }
 }
 toggleScrollSnap();
-
-$(window).resize(function(){
-    toggleScrollSnap();
-  });
