@@ -89,6 +89,7 @@ button, .portfolio-screenshot {
 /* The container item that holds the description and tech list */
 .container-text-item {
     background-color: rgba(0, 0, 0, .7);
+    box-shadow: rgba(0, 0, 0, .4);
 }
 
 .screenshot-container {
@@ -266,6 +267,7 @@ button, .portfolio-screenshot {
 
 .about-me, .skill-chart {
     margin: 10px;
+    box-shadow: rgba(0, 0, 0, .4);
 }
 
 .about-me-header {
